@@ -1,0 +1,16 @@
+<Navbar [mode]="'light'">
+  住所を入力してください
+</Navbar>
+<WhiteSpace size='md'></WhiteSpace>
+<ListItem [(ngModel)]="address.city" [extra]="address.city" [okText]="'確認'" [dismissText]="'キャンセル'" Picker
+  [arrow]="'horizontal'" [data]="singleArea">
+  都道府県
+</ListItem>
+
+<InputItem [content]="'住所1'" [(ngModel)]="address.line1"></InputItem>
+<InputItem [content]="'住所2'" [(ngModel)]="address.line2"></InputItem>
+<InputItem [content]="'氏名'" [(ngModel)]="address.name"></InputItem>
+<WhiteSpace size='md'></WhiteSpace>
+<div class="buy">
+  <div Button (click)="handleClick()" [loading]="isLoding" [type]="'primary'">今すぐ買う</div>
+</div>
